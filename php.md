@@ -86,3 +86,15 @@ vendor: composer.json composer.lock
 
 Note: if you are copying and pasting the above example, you'll probably have
 to replace spaces with tabs for the Makefile to work.
+
+Tests
+=====
+Unit tests should be included using **phpunit**.  Code coverage should cover
+the *majority* of the code.
+
+In addition, a Makefile target name **test** should be added.
+
+```
+test:
+    phpunit
+```
