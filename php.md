@@ -80,6 +80,7 @@ clean:
 
 vendor: composer.json composer.lock
     composer install
+    touch $@
 
 .PHONY: default build clean
 ```
