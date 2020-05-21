@@ -67,6 +67,17 @@ mysql://user:pass@host:port/schema
 #### JWT_SECRET
 Shared secret for JWT authentication and authorization.
 
+#### LISTEN_PID
+This variable is used by systemd when the service is being socket activated.
+When this variable is present, systemd socket activation should be enabled.
+Otherwise, the service should listen on LISTEN_PORT if set, or a default port
+if not.
+
+#### LISTEN_PORT
+Set TCP port to listen on.  Should be ignored if using systemd socket
+activation.  Should default to 443 if using TLS.  It's also a good idea to
+default to 80 if not using TLS.
+
 #### REDIS_URL
 URL describing Redis connection settings.  Example:
 redis://:pass@host:port/database
